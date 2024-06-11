@@ -1,0 +1,96 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+  margin: 20px 0 30px 0;
+  padding: 0;
+}
+.filters li button {
+  color: #ffffff;
+  padding: 10px 25px;
+  transition: 0.3s;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: center;
+}
+.filters li button:hover,
+.filters li button.active {
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.search {
+  color: #9c9c9c;
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.search input {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+.search input:focus {
+  color: #ffffff;
+}
+.search input::placeholder {
+  color: #9c9c9c;
+}
+.gameList {
+  margin: 0 auto;
+}
+
+/*CateGories Section Game Animation using react-transition-group */
+/* Initial and exit state */
+.game-enter {
+  opacity: 0;
+  transform: rotateY(-90deg);
+}
+.game-exit {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+/* Entering and exiting */
+.game-enter-active {
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: opacity 300ms, transform 300ms;
+}
+.game-exit-active {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: opacity 300ms, transform 300ms;
+}
+@media (max-width: 768px) {
+  .search {
+    display: flex;
+    justify-content: center;
+    max-width: 110%;
+    padding: 0;
+    width: 100vw;
+    margin-left: 10%;
+  }
+  .bi-search {
+    color: white;
+    margin-left: 20%;
+  }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}

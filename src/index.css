@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93+V1");
+/* @import "./pages/Home.css"; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #0d171f;
+  --second: #0998a8;
+  --bgColor: #192938;
+  --sideColor: #dad7cd;
+  /* --bgColor: #283618; */
+  --cardColor: #fefae0;
+  --swiperColor: #e9edc9;
+}
+
+h1,
+h2,
+h4,
+p {
+  color: #ffffff;
+}
+
+body {
+  position: relative;
+  background-color: var(--bgColor);
+  font-family: "sans-serif";
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}

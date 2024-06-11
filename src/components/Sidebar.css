@@ -1,0 +1,214 @@
+.sideMenu {
+  width: 20%;
+  height: 100%;
+  padding: 30px;
+  background-color: var(--bgColor);
+  border-radius: 20px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+.sideMenu .logo {
+  font-family: "Bauhaus 93";
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 2vw + 1rem, 4rem);
+}
+.brand {
+  color: yellowgreen;
+}
+
+/* Media queries for specific screen sizes, if needed for further customization */
+@media (max-width: 600px) {
+  /* Small screens */
+  .sideMenu .logo {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  /* Medium screens */
+  .sideMenu .logo {
+    font-size: clamp(
+      1.5rem,
+      2vw + 1rem,
+      3rem
+    ); /* Smallest size: 1.5rem, scales with viewport, max: 3rem */
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+  /* Large screens */
+  .sideMenu .logo {
+    font-size: clamp(
+      2rem,
+      2vw + 1rem,
+      4rem
+    ); /* Smallest size: 2rem, scales with viewport, max: 4rem */
+  }
+}
+
+@media (min-width: 1921px) {
+  /* 4K screens */
+  .sideMenu .logo {
+    font-size: clamp(
+      3rem,
+      2vw + 1rem,
+      5rem
+    ); /* Smallest size: 3rem, scales with viewport, max: 5rem */
+  }
+  .sideMenu .nav li a {
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  }
+}
+.sideMenu .nav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+.sideMenu .nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  transition: 0.5s;
+  background-color: var(--bgColor);
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.sideMenu .nav li a:hover,
+.sideMenu .nav li a.active {
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+.sideMenu .social {
+  position: sticky;
+  margin-top: 80vh;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  transition: 0.5s;
+  margin-left: -30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.sideMenu .social li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-size: large;
+  transition: 0.3s;
+}
+.bi-meta,
+.bi-share {
+  color: var(--second);
+}
+.bi-meta,
+.bi-twitter-x,
+.bi-youtube,
+.bi-share {
+  transition: all ease-in-out 0.5s;
+}
+.bi-twitter-x {
+  color: rgb(0, 0, 0);
+}
+.bi-youtube {
+  color: red;
+}
+
+.share {
+  background: rgb(255, 255, 255);
+  padding: 2px 2px;
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.sideMenu.active {
+  width: 7%;
+  transition: 1s;
+  overflow: hidden;
+  align-items: center;
+}
+.sideMenu.active .brand,
+.sideMenu.active .navName {
+  display: none;
+}
+
+.sideMenu.active .nav li a {
+  font-size: 1.4em;
+  color: yellowgreen;
+}
+
+.sideMenu .logo i {
+  transition: all ease-in-out 1s;
+}
+.sideMenu.active .logo i {
+  background: -webkit-linear-gradient(0deg, #ff4747 0%, #93ff47 100%);
+  background: linear-gradient(0deg, #ff4747 0%, #93ff47 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.sideMenu.active .social {
+  position: absolute;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -0.5%;
+  font-size: 1em;
+}
+
+@media (max-width: 992px) {
+  .sideMenu {
+    display: block;
+    width: 30%;
+    transition: 1s;
+    padding: 10px;
+  }
+  .sideMenu.active {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .sideMenu {
+    display: flex;
+    width: 45%;
+    transition: 1s;
+    padding: 10px;
+  }
+  .sideMenu.active {
+    display: none;
+  }
+  .sideMenu .nav li a {
+    min-width: fit-content;
+    font-size: small;
+    padding: 10px;
+  }
+}

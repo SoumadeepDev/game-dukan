@@ -1,0 +1,38 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.tagh1 {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.tag {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.tagImg {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: large;
+}
+
+.anchor:hover {
+  color: #0056b3;
+}

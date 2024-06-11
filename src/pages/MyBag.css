@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+.emptyBag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+}
+.bag_h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.shopBagTable {
+  margin-top: 50px;
+  color: #ffffff;
+  border-radius: 20px;
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+}
+
+.shopBagTable thead tr {
+  font-size: 1.3rem;
+  border-bottom: 2px rgba(109, 108, 108, 0.1);
+  border-bottom-style: dashed;
+}
+
+.shopBagTable thead tr th {
+  background: transparent;
+  color: #000000;
+}
+
+.itemCount {
+  font-size: 1.3rem;
+}
+.payment {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+.payment a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 15px;
+  display: inline-flex;
+  align-self: center;
+  gap: 10px;
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (max-width: 768px) {
+  .emptyBag img {
+    background-size: cover;
+    height: 300px;
+    width: 350px;
+    object-fit: contain;
+  }
+
+  .shopBagTable {
+    margin-top: 30px;
+    font-size: 1.2rem;
+
+    /* Adjust font size for small screens */
+  }
+
+  .shopBagTable thead tr {
+    font-size: 0.9rem; /* Adjust font size for table headers */
+  }
+
+  .bag_h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .payment {
+    gap: 20px; /* Adjust gap between payment options */
+    font-size: 1rem; /* Adjust font size for payment options */
+  }
+
+  .payment a {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 1rem; /* Adjust font size for buttons */
+  }
+}

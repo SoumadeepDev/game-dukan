@@ -1,0 +1,113 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000 !important;
+  background: transparent;
+}
+.menu {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.userItems {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userItems .icon {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.userItems .icon .bag,
+.userItems .icon .like {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  height: 20px;
+  width: 20px;
+  padding: 3px;
+  color: #ffffff;
+  background: var(--second);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userItems .icon.active {
+  color: red;
+}
+.userItems .icon.bactive {
+  color: yellow;
+}
+
+.userItems .avatar {
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+.userItems .avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.userItems .avatar .user {
+  display: flex;
+  flex-direction: column;
+}
+.userItems .avatar .user span {
+  color: #ffffff;
+  font-size: 0.7rem;
+}
+.userItems .avatar .user a {
+  text-decoration: none;
+  font-size: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 0.5rem;
+  }
+  .menu {
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+  .userItems {
+    width: 250px;
+  }
+  .userItems .avatar .user span {
+    display: none;
+  }
+  .userItems .avatar .user a {
+    display: flex;
+  }
+  .userItems .avatar {
+    width: fit-content;
+  }
+}
