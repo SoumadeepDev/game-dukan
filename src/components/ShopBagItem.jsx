@@ -10,9 +10,9 @@ const ShopBagItem = ({ index, game }) => {
         <img src={game.img} alt={game.title} className="img-fluid" />
       </td>
       <td className="gameTitle">{game.title}</td>
-      <td>${game.price.toFixed(2)}</td>
+      <td>Rs.{game.price.toFixed(2)}</td>
       <td>{game.discount * 100}%</td>
-      <td>${(game.price * (1 - game.discount)).toFixed(2)}</td>
+      <td>Rs.{(game.price * (1 - game.discount)).toFixed(2)}</td>
       <td>
         <a href="#" onClick={() => handleDeleteFromBag(game)}>
           <i className="bi bi-trash"></i>

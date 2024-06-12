@@ -58,23 +58,26 @@
     5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .emptyBag img {
     background-size: cover;
     height: 300px;
-    width: 350px;
+    width: auto;
     object-fit: contain;
   }
 
   .shopBagTable {
     margin-top: 30px;
     font-size: 1.2rem;
+    overflow: auto;
 
     /* Adjust font size for small screens */
   }
 
   .shopBagTable thead tr {
     font-size: 0.9rem; /* Adjust font size for table headers */
+    max-width: fit-content;
+    width: 100vw;
   }
 
   .bag_h2 {

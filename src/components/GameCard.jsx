@@ -50,13 +50,13 @@ const GameCard = ({ game }) => {
               <span className="discount">
                 <i>{game.discount * 100}% off</i>
               </span>
-              <span className="prevPrice">${game.price.toFixed(2)}</span>
+              <span className="prevPrice">Rs.{game.price.toFixed(2)}</span>
+
+              <span className="currentPrice">
+                Rs.{((1 - game.discount) * game.price).toFixed(2)}
+              </span>
             </>
           )}
-
-          <span className="currentPrice">
-            ${((1 - game.discount) * game.price).toFixed(2)}
-          </span>
         </div>
         <a href="#" className="addBag" onClick={() => handleAddToBag(game)}>
           <i className="bi bi-bag-plus-fill"></i>

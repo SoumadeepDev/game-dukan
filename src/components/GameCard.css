@@ -130,11 +130,30 @@
   font-size: 1.5rem;
 }
 @media (max-width: 768px) {
+  .banner {
+    margin-left: 0rem;
+  }
   .gameCard {
-    min-width: auto;
+    width: 75vw;
+    height: auto;
   }
   .gameCard:hover {
     transform: scale(1);
     border-color: transparent;
+  }
+  .discount {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .gameCard .addBag {
+    position: absolute;
+    bottom: -1.2rem;
+    transform: scale(1.2);
+  }
+  .addBag:hover {
+    transform: scale(1.2);
   }
 }

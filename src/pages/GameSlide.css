@@ -141,7 +141,65 @@ h1 {
   transition: 0.3s;
 }
 iframe {
+  margin-left: 1rem;
   border-radius: 10px;
   width: 720px;
   height: 300px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .gameInfo {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .gameImage {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .gameDetails {
+    position: relative;
+    margin: 1rem auto;
+    width: 100%;
+    text-align: center;
+  }
+  .gamePrice {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 50px;
+  }
+  .gamePrice .prevPrice {
+    position: absolute;
+    margin: 0 auto;
+  }
+
+  .container .gamePrice .discount {
+    position: relative;
+    margin: 1rem auto;
+  }
+
+  .addBag {
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .gameSlide iframe {
+    width: 90%;
+    max-width: 90vw;
+    min-height: calc(100vw * 0.5625); /* 16:9 aspect ratio */
+    margin-bottom: 5rem;
+  }
 }

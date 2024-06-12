@@ -65,7 +65,7 @@ const MyBag = () => {
                 </div>
                 <div className="col-lg-10 d-flex justify-content-end">
                   <div className="payment">
-                    Total: ${total}
+                    Total: Rs.{total}
                     <a href="#">
                       Check Out <i className="bi bi-wallet-fill"></i>
                     </a>

@@ -13,16 +13,13 @@ const GameSlide = () => {
   if (!game) {
     return <div>Loading...</div>;
   }
-  const handleClick = () => {
-    section.ref.current.classList.remove("active");
-  };
 
   return (
     <div
       className="gameSlide"
       style={{ backgroundImage: `url(${game.background})` }}
     >
-      <Link to="/home" className="backButton" onClick={handleClick}>
+      <Link to="/home" className="backButton">
         Go Back
       </Link>
       <div className="overlay">
@@ -37,7 +34,10 @@ const GameSlide = () => {
                   <GameRatings rating={game.rating} />
                 </p>
 
-                <h4>Current Price: ${(1 - game.discount) * game.price}</h4>
+                <h4>
+                  Current Price: $
+                  {((1 - game.discount) * game.price).toFixed(2)}
+                </h4>
                 <p>Type: {game.category}</p>
                 <p>
                   Level:{" "}
